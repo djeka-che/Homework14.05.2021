@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./index.css";
+import Small from './Small'
+import Large from './Large'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function ParentBlock() {
+
+    const Num = 50
+
+    return (
+
+        <div className='App'>
+            {Num < 50 ? <Small/> : <Large/>}
+
+            {Num < 50 ? console.log(<Small/>) : console.log(<Large/>)}
+        </div>
+
+    )
+
 }
 
-export default App;
+
+export default ParentBlock
+
+
+/*function SomeBlock()
+{
+    const dark = true;
+
+    const someBlock = this;
+    return (
+        <div className="dark">
+            {dark === true ? <div className={'dark'}>Hello, ternary operator!</div> :
+                <div className={'light'}>Hello, ternary operator!</div>}
+        </div>
+    );
+
+}*/
+
+/*export default SomeBlock*/
